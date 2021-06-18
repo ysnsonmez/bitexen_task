@@ -29,7 +29,6 @@ describe('Reading a OrderBook', () => {
     it('Finds OrderBook with market_code', (done) => {
         OrderBook.findOne({"ticker.market.market_code": 'BTCTRY'})
             .then((orderbookvalue) => {
-              console.log("orderbookvalue:", orderbookvalue.ticker.market.market_code)
                 assert(orderbookvalue.ticker.market.market_code === 'BTCTRY');
                 done();
             });
