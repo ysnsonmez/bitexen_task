@@ -227,7 +227,7 @@ app.listen(PORT, function() {
     // });
 
     cron.schedule('59 23 * * *', function() {
-        console.log('running a task every day “At 01:00.”');
+        console.log('running a task every day “At 23:59.”');
         saveDailyStatisticData();
     });
       
